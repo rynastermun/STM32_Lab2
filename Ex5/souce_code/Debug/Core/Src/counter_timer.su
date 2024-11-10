@@ -1,0 +1,4 @@
+counter_timer.c:14:6:setTimer1	16	static
+counter_timer.c:20:6:timer1Run	4	static
+counter_timer.c:32:6:setTimer2	16	static
+counter_timer.c:38:6:timer2Run	4	static

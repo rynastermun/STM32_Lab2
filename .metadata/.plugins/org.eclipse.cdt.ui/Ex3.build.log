@@ -1,0 +1,23 @@
+11:18:39 **** Incremental Build of configuration Debug for project Ex3 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Ex3.elf" @"objects.list"   -mcpu=cortex-m3 -T"G:\STM32_Lab2\Ex3\souce_code\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Ex3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Ex3.elf
+ 
+arm-none-eabi-size   Ex3.elf 
+arm-none-eabi-objdump -h -S  Ex3.elf  > "Ex3.list"
+arm-none-eabi-objcopy  -O ihex  Ex3.elf  "Ex3.hex"
+arm-none-eabi-objcopy  -O binary  Ex3.elf  "Ex3.bin"
+Finished building: Ex3.bin
+Finished building: Ex3.hex
+   text	   data	    bss	    dec	    hex	filename
+   7960	     44	   1644	   9648	   25b0	Ex3.elf
+ 
+Finished building: default.size.stdout
+Finished building: Ex3.list
+ 
+ 
+ 
+
+11:18:40 Build Finished. 0 errors, 0 warnings. (took 743ms)
+

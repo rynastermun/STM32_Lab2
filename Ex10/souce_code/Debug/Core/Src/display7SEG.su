@@ -1,0 +1,5 @@
+display7SEG.c:12:6:display7SEG	16	static
+display7SEG.c:109:6:update7SEG	16	static
+display7SEG.c:140:6:updateClockBuffer	4	static
+display7SEG.c:151:6:updateLEDMatrix	16	static
+display7SEG.c:200:6:shiftMatrix	16	static

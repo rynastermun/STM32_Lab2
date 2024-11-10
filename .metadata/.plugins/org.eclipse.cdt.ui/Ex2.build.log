@@ -1,0 +1,24 @@
+12:42:17 **** Incremental Build of configuration Debug for project Ex2 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
+arm-none-eabi-gcc -o "Ex2.elf" @"objects.list"   -mcpu=cortex-m3 -T"G:\STM32_Lab2\Ex2\souce_code\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Ex2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Ex2.elf
+ 
+arm-none-eabi-size   Ex2.elf 
+arm-none-eabi-objdump -h -S  Ex2.elf  > "Ex2.list"
+arm-none-eabi-objcopy  -O ihex  Ex2.elf  "Ex2.hex"
+arm-none-eabi-objcopy  -O binary  Ex2.elf  "Ex2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   8244	     20	   1660	   9924	   26c4	Ex2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Ex2.hex
+Finished building: Ex2.bin
+ 
+ 
+Finished building: Ex2.list
+ 
+
+12:42:21 Build Finished. 0 errors, 0 warnings. (took 3s.271ms)
+

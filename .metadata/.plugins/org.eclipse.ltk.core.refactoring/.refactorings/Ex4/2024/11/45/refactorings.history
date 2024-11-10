@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Ex4/Ex3.ioc&apos; to &apos;Ex4.ioc&apos;" description="Rename resource &apos;Ex3.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Ex3.ioc" name="Ex4.ioc" stamp="1730965925768" updateReferences="true"/>
+</session>
